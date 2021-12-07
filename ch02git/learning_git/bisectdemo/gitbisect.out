@@ -1,0 +1,54 @@
+running  'python' 'squares.py' '2'
+4
+Bisecting: 250 revisions left to test after this (roughly 8 steps)
+[7dfda4828315eb360bc7cc86037026265b9561a6] Comment 750
+running  'python' 'squares.py' '2'
+4
+Bisecting: 125 revisions left to test after this (roughly 7 steps)
+[be07d32fdb15eff4de59e6786fe7e8a1a2d493ec] Comment 875
+running  'python' 'squares.py' '2'
+4
+Bisecting: 62 revisions left to test after this (roughly 6 steps)
+[63f5bf021ede971f1fa4db0eae00fa2288ea8b73] Comment 938
+running  'python' 'squares.py' '2'
+4
+Bisecting: 31 revisions left to test after this (roughly 5 steps)
+[ab41ca85b182f7cf15c8bd2ba4900338ffa6841c] Comment 969
+running  'python' 'squares.py' '2'
+4
+Bisecting: 15 revisions left to test after this (roughly 4 steps)
+[74179e737b022f383dc54c3d93224139149f873f] Comment 985
+running  'python' 'squares.py' '2'
+4
+Bisecting: 7 revisions left to test after this (roughly 3 steps)
+[c98beb947379d47138efcdf93b84c1fe8392db43] Comment 992
+running  'python' 'squares.py' '2'
+Traceback (most recent call last):
+  File "squares.py", line 9, in <module>
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[b786b62e53d7a94552cb747e3b551f386b628347] Comment 989
+running  'python' 'squares.py' '2'
+4
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[8f15b7ac29aced9d3a92f4cbfc82b391f146c65e] Comment 991
+running  'python' 'squares.py' '2'
+4
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[49dea67cb43b2a28d15981cceb3fe7eb799bbbfa] Breaking argument type
+running  'python' 'squares.py' '2'
+Traceback (most recent call last):
+  File "squares.py", line 9, in <module>
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+49dea67cb43b2a28d15981cceb3fe7eb799bbbfa is the first bad commit
+commit 49dea67cb43b2a28d15981cceb3fe7eb799bbbfa
+Author: Shawn Siefkas <shawn.siefkas@meredith.com>
+Date:   Thu Nov 14 09:23:55 2013 -0600
+
+    Breaking argument type
+
+ squares.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bisect found first bad commit
